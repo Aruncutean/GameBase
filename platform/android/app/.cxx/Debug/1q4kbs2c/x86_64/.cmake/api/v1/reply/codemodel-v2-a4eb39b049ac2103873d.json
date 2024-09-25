@@ -1,0 +1,168 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6.0"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "SDL",
+					"jsonFile" : "directory-SDL-Debug-ddcb27271f2396b9eeda.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.4"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "SDL",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6
+					]
+				},
+				{
+					"build" : "src",
+					"jsonFile" : "directory-src-Debug-c94b7c2814d5a21df52c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "GAME"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "SDL2",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "MY_APP",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL2::@e7c329919722962a2ad4",
+					"jsonFile" : "target-SDL2-Debug-7735a0b4975a3fa110de.json",
+					"name" : "SDL2",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL2-static::@e7c329919722962a2ad4",
+					"jsonFile" : "target-SDL2-static-Debug-711f627a3d9bcba2fa2b.json",
+					"name" : "SDL2-static",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL2_test::@e7c329919722962a2ad4",
+					"jsonFile" : "target-SDL2_test-Debug-8d888963208742dc461d.json",
+					"name" : "SDL2_test",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL2main::@e7c329919722962a2ad4",
+					"jsonFile" : "target-SDL2main-Debug-bee184cdec95f2ecad9d.json",
+					"name" : "SDL2main",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "main::@145eef247bfb46b6828c",
+					"jsonFile" : "target-main-Debug-ca42a9088fbd226085a5.json",
+					"name" : "main",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "sdl_headers_copy::@e7c329919722962a2ad4",
+					"jsonFile" : "target-sdl_headers_copy-Debug-399183c2b0082779f78b.json",
+					"name" : "sdl_headers_copy",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "uninstall::@e7c329919722962a2ad4",
+					"jsonFile" : "target-uninstall-Debug-33668b60c5aa94b14b6d.json",
+					"name" : "uninstall",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/arunc/source/repos/test/platform/android/app/.cxx/Debug/1q4kbs2c/x86_64",
+		"source" : "C:/Users/arunc/source/repos/test/platform/android/app/jni"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

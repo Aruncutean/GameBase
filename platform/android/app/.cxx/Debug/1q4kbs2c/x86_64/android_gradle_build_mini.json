@@ -1,0 +1,73 @@
+{
+  "buildFiles": [
+    "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\jni\\CMakeLists.txt",
+    "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\jni\\SDL\\cmake\\CheckCPUArchitecture.cmake",
+    "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\jni\\SDL\\cmake\\macros.cmake",
+    "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\jni\\SDL\\cmake\\sdlchecks.cmake",
+    "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\jni\\SDL\\cmake\\sdlfind.cmake",
+    "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\jni\\SDL\\cmake\\sdlplatform.cmake",
+    "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\jni\\SDL\\cmake_uninstall.cmake.in",
+    "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\jni\\SDL\\CMakeLists.txt",
+    "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\jni\\SDL\\include\\SDL_config.h.cmake",
+    "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\jni\\SDL\\include\\SDL_revision.h.cmake",
+    "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\jni\\src\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\arunc\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\.cxx\\Debug\\1q4kbs2c\\x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\arunc\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\.cxx\\Debug\\1q4kbs2c\\x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "main::@145eef247bfb46b6828c": {
+      "artifactName": "main",
+      "abi": "x86_64",
+      "output": "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\build\\intermediates\\cxx\\Debug\\1q4kbs2c\\obj\\x86_64\\libmain.so",
+      "runtimeFiles": [
+        "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\build\\intermediates\\cxx\\Debug\\1q4kbs2c\\obj\\x86_64\\libSDL2.so"
+      ]
+    },
+    "SDL2main::@e7c329919722962a2ad4": {
+      "artifactName": "SDL2main",
+      "abi": "x86_64",
+      "output": "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\.cxx\\Debug\\1q4kbs2c\\x86_64\\SDL\\libSDL2main.a",
+      "runtimeFiles": []
+    },
+    "sdl_headers_copy::@e7c329919722962a2ad4": {
+      "artifactName": "sdl_headers_copy",
+      "abi": "x86_64",
+      "runtimeFiles": []
+    },
+    "uninstall::@e7c329919722962a2ad4": {
+      "artifactName": "uninstall",
+      "abi": "x86_64",
+      "runtimeFiles": []
+    },
+    "SDL2-static::@e7c329919722962a2ad4": {
+      "artifactName": "SDL2-static",
+      "abi": "x86_64",
+      "output": "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\.cxx\\Debug\\1q4kbs2c\\x86_64\\SDL\\libSDL2.a",
+      "runtimeFiles": []
+    },
+    "SDL2::@e7c329919722962a2ad4": {
+      "artifactName": "SDL2",
+      "abi": "x86_64",
+      "output": "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\build\\intermediates\\cxx\\Debug\\1q4kbs2c\\obj\\x86_64\\libSDL2.so",
+      "runtimeFiles": []
+    },
+    "SDL2_test::@e7c329919722962a2ad4": {
+      "artifactName": "SDL2_test",
+      "abi": "x86_64",
+      "output": "C:\\Users\\arunc\\source\\repos\\test\\platform\\android\\app\\.cxx\\Debug\\1q4kbs2c\\x86_64\\SDL\\libSDL2_test.a",
+      "runtimeFiles": []
+    }
+  }
+}

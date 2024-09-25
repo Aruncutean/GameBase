@@ -1,0 +1,80 @@
+.vs/
+*.ipch
+*.db
+.out/
+
+
+# Directoarele generate automat de Android Studio și gradle
+.gradle/
+.idea/
+build/
+captures/
+.externalNativeBuild/
+
+# Fișierele de configurare specifice IDE-ului (Android Studio, IntelliJ)
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/gradle.xml
+.idea/**/libraries
+.idea/**/modules.xml
+.idea/.name
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/.idea/
+
+# Fișierele locale generate automat pentru Android Studio
+local.properties
+*.iml
+
+# Fișierele și directoarele de build
+platform/android/app/.cxx/
+/local.properties
+**/build/
+/app/build/
+/.gradle/
+/gradle/
+/captures/
+
+# Fișiere de configurare pentru testare
+.idea/gradle.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/dictionaries
+.idea/libraries/
+/gradle/
+/captures/
+
+# Fișiere specifice pentru emulator și dispozitive conectate
+*.apk
+*.ap_
+
+# Fișierele de log și temporare
+*.log
+*.tmp
+*.temp
+
+# Fișierele de debug și simboluri
+crashlytics-build.properties
+crashlytics/
+fabric/
+
+# Fișierele de configurare specifice sistemului de operare (macOS și Windows)
+.DS_Store
+Thumbs.db
+
+# Gradle Wrapper
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Fișiere pentru baza de date (dacă se folosesc)
+*.db
+*.sqlite
+
+# Fișiere pentru NDK
+.externalNativeBuild/
+cmakeBuild/
+.externalNativeBuild/**/cmake/debug/
+/.externalNativeBuild/**/cmake/release/

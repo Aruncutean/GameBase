@@ -1,0 +1,11 @@
+C:\Users\arunc\source\repos\test\platform\android\app\jni\CMakeLists.txt
+C:\Users\arunc\source\repos\test\platform\android\app\jni\SDL\cmake\CheckCPUArchitecture.cmake
+C:\Users\arunc\source\repos\test\platform\android\app\jni\SDL\cmake\macros.cmake
+C:\Users\arunc\source\repos\test\platform\android\app\jni\SDL\cmake\sdlchecks.cmake
+C:\Users\arunc\source\repos\test\platform\android\app\jni\SDL\cmake\sdlfind.cmake
+C:\Users\arunc\source\repos\test\platform\android\app\jni\SDL\cmake\sdlplatform.cmake
+C:\Users\arunc\source\repos\test\platform\android\app\jni\SDL\cmake_uninstall.cmake.in
+C:\Users\arunc\source\repos\test\platform\android\app\jni\SDL\CMakeLists.txt
+C:\Users\arunc\source\repos\test\platform\android\app\jni\SDL\include\SDL_config.h.cmake
+C:\Users\arunc\source\repos\test\platform\android\app\jni\SDL\include\SDL_revision.h.cmake
+C:\Users\arunc\source\repos\test\platform\android\app\jni\src\CMakeLists.txt
