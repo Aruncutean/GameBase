@@ -28,7 +28,7 @@ local.properties
 *.iml
 
 # Fișierele și directoarele de build
-platform/android/app/.cxx/
+/.cxx/
 /local.properties
 **/build/
 /app/build/
