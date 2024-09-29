@@ -2,6 +2,7 @@
 *.ipch
 *.db
 .out/
+cmake-build-debug-visual-studio/
 
 
 # Directoarele generate automat de Android Studio și gradle
