@@ -8,7 +8,7 @@ public:
 
 	~Mesh();
 
-	void render();
+	void draw();
 private:
 	unsigned int VBO, VAO, EBO;
 };

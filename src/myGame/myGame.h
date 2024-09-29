@@ -5,26 +5,25 @@
 #ifndef MYGAME_H
 #define MYGAME_H
 #include "../game/game.h"
-#include "../graphics/shader.h"
-#include "../graphics/texture.h"
-#include "../graphics/mesh.h"
-#include "../graphics/render.h"
+#include "../graphics/scene/scene2d.h"
 
-class MyGame : public Game{
+class MyGame : public Game {
 public:
-     void init();
-     void start();
-     void update();
-     void stop();
+    MyGame();
+    ~MyGame();
 
+    void init();
+
+    void start();
+
+    void update();
+
+    void stop();
 
 private:
-     Shader *shader;
-     Texture *texture;
-     Mesh *mesh;
-     Render *render;
+    Scene2d *scene;
+    float speed = 0.5f;
 };
-
 
 
 #endif //MYGAME_H

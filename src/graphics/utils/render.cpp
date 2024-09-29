@@ -30,6 +30,5 @@ void Render::render(Mesh mesh, Shader shader, Texture texture)
 	shader.setMat4("projection", projection);
 
 
-	mesh.render();
-
+	mesh.draw();
 }

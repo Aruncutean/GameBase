@@ -18,13 +18,19 @@ include_directories(${CMAKE_SOURCE_DIR}/lib/stb)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib/SDL/lib/x64)
 
-add_executable(test "src/main.cpp" ${CMAKE_SOURCE_DIR}/lib/glad/src/glad.c  "src/graphics/render.h" "src/graphics/render.cpp" "src/graphics/texture.cpp" "src/graphics/texture.h" "src/graphics/shader.cpp" "src/graphics/shader.h" "src/graphics/mesh.h" "src/graphics/mesh.cpp"
+add_executable(test "src/main.cpp" ${CMAKE_SOURCE_DIR}/lib/glad/src/glad.c  "src/graphics/utils/render.h" "src/graphics/utils/render.cpp" "src/graphics/utils/texture.cpp" "src/graphics/utils/texture.h" "src/graphics/utils/shader.cpp" "src/graphics/utils/shader.h" "src/graphics/utils/mesh.h" "src/graphics/utils/mesh.cpp"
         src/window/Window.cpp
         src/window/Window.h
         src/game/game.cpp
         src/game/game.h
         src/myGame/myGame.cpp
-        src/myGame/myGame.h)
+        src/myGame/myGame.h
+        src/graphics/scene/scene2d.cpp
+        src/graphics/scene/scene2d.h
+        src/graphics/object/Object2d.cpp
+        src/graphics/object/Object2d.h
+        src/utils/Utils.cpp
+        src/utils/Utils.h)
 
 target_link_libraries(test SDL2main SDL2 opengl32)
 

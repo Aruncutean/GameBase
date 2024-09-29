@@ -6,18 +6,18 @@
 #include <SDL.h>
 #include <string>
 #include <vector>
-Texture::Texture()
+Texture::Texture(std::string texturePath)
 {
     glGenTextures(1, &texture1);
     glBindTexture(GL_TEXTURE_2D, texture1);
 
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-    SDL_RWops* file = SDL_RWFromFile("container.jpg", "rb");
+    SDL_RWops* file = SDL_RWFromFile(texturePath.c_str(), "rb");
     if (!file) {
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Failed to open file from assets: %s", SDL_GetError());
         return;
@@ -42,8 +42,15 @@ Texture::Texture()
     int width, height, nrChannels;
     unsigned char* data = stbi_load_from_memory(buffer.data(), buffer.size(), &width, &height, &nrChannels, 0);
     if (data) {
+        GLenum format;
+        if (nrChannels == 1)
+            format = GL_RED;
+        else if (nrChannels == 3)
+            format = GL_RGB;
+        else if (nrChannels == 4)
+            format = GL_RGBA;
         // Textura este încărcată corect
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+        glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
         glGenerateMipmap(GL_TEXTURE_2D);
         SDL_Log("Image loaded successfully");
     } else {

@@ -13,7 +13,6 @@ unsigned int indices[] = {
     1, 2, 3  // second triangle
 };
 
-
 Mesh::Mesh()
 {
     glGenVertexArrays(1, &VAO);
@@ -34,15 +33,14 @@ Mesh::Mesh()
 
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
-
-
 }
 
 Mesh::~Mesh()
 {
+
 }
 
-void Mesh::render()
+void Mesh::draw()
 {
     glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
