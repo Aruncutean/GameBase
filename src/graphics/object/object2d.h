@@ -16,6 +16,7 @@ class Scene2d;
 
 class Object2d {
 public:
+    std::string id;
     Object2d();
 
     Object2d(Object2d &object2d);
@@ -29,17 +30,23 @@ public:
     void draw();
 
     void setPoz(float x, float y);
-    glm::vec3 getPoz(){return poz;}
+
+    void setAngle(float angle) {
+        this->angle = angle;
+    }
+
+    glm::vec3 getPoz() { return poz; }
+
     void setScale(float x, float y);
 
 private:
-    std::string id;
+
 
     Scene2d *scene2d;
     Shader *shader;
     Texture *texture;
     Mesh *mesh;
-
+    float angle = 0;
     glm::vec3 poz = glm::vec3(400.0f, 300.0f, 0.0f);
     glm::vec3 scale = glm::vec3(100.0f, 100.0f, 1.0f);
 };

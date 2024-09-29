@@ -45,6 +45,7 @@ void Object2d::draw() {
 
     model = glm::translate(model, poz);
     model = glm::scale(model, scale);
+    model = glm::rotate(model, glm::radians(angle), glm::vec3(0.0f, 0.0f, 1.0f));
     shader->use();
     texture->active();
     unsigned int modelLoc = glGetUniformLocation(shader->ID, "model");

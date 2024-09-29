@@ -6,7 +6,7 @@
 #define MYGAME_H
 #include "../game/game.h"
 #include "../graphics/scene/scene2d.h"
-
+#include <vector>
 class MyGame : public Game {
 public:
     MyGame();
@@ -23,6 +23,8 @@ public:
 private:
     Scene2d *scene;
     float speed = 0.5f;
+    std::vector<Object2d *> *pipes;
+    Object2d *pipe;
 };
 
 

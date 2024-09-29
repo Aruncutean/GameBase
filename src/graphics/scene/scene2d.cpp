@@ -36,6 +36,10 @@ void Scene2d::addObject(Object2d *obj) {
     objects->push_back(obj);
 }
 
+void Scene2d::removeObject(std::string id) {
+    objects->erase(std::remove_if(objects->begin(), objects->end(), [id](Object2d* i) { return i->id == id; }), objects->end());
+}
+
 void Scene2d::addBackground(Object2d *obj) {
     obj->setScene(this);
     background->push_back(obj);

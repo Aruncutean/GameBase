@@ -25,6 +25,8 @@ public:
 
     void addObject(Object2d *obj);
 
+    void removeObject(std::string id);
+
     void addBackground(Object2d *obj);
 
     glm::mat4 getProject() const { return projection; }

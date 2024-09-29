@@ -96,7 +96,7 @@ void Window::initSDL() {
     window = SDL_CreateWindow("My Game",
                               SDL_WINDOWPOS_CENTERED,
                               SDL_WINDOWPOS_CENTERED,
-                              800, 600,
+                              800, 512,
                               SDL_WINDOW_OPENGL);
 #endif
     if (!window) {
