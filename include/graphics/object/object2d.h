@@ -7,10 +7,10 @@
 
 #include <iostream>
 
-#include "../scene/scene2d.h"
-#include "../utils/shader.h"
+#include "graphics/scene/scene2d.h"
+#include "graphics/utils/shader.h"
 #include "../utils/texture.h"
-#include "../utils/mesh.h"
+#include "graphics/utils/mesh.h"
 
 class Scene2d;
 
@@ -36,7 +36,7 @@ public:
     }
 
     glm::vec3 getPoz() { return poz; }
-
+    glm::vec3 getScale() { return scale; }
     void setScale(float x, float y);
 
 private:

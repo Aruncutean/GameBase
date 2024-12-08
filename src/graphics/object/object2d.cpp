@@ -2,15 +2,26 @@
 // Created by arunc on 29/09/2024.
 //
 
-#include "object2d.h"
-#include "../../utils/utils.h"
+#include "graphics/object/object2d.h"
+#include "utils/utils.h"
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+std::vector<float> vertices = {
+    // positions          // texture coords
+    0.5f, 0.5f, 0.0f, 1.0f, 1.0f, // top right
+    0.5f, -0.5f, 0.0f, 1.0f, 0.0f, // bottom right
+    -0.5f, -0.5f, 0.0f, 0.0f, 0.0f, // bottom left
+    -0.5f, 0.5f, 0.0f, 0.0f, 1.0f // top left
+};
+std::vector<unsigned int> indices = {
+    0, 1, 3, // first triangle
+    1, 2, 3 // second triangle
+};
 
 Object2d::Object2d() {
     id = Utils::generateUniqueID();
-    mesh = new Mesh();
+    mesh = new Mesh(&vertices, &indices);
 
     shader = new Shader();
 
@@ -26,6 +37,7 @@ Object2d::Object2d(Object2d &object2d) {
     scene2d = object2d.scene2d;
     poz = object2d.poz;
     scale = object2d.scale;
+    angle = object2d.angle;
 }
 
 Object2d::~Object2d() {
@@ -44,8 +56,11 @@ void Object2d::draw() {
     glm::mat4 view = glm::mat4(1.0f);
 
     model = glm::translate(model, poz);
-    model = glm::scale(model, scale);
     model = glm::rotate(model, glm::radians(angle), glm::vec3(0.0f, 0.0f, 1.0f));
+
+    model = glm::scale(model, scale);
+
+
     shader->use();
     texture->active();
     unsigned int modelLoc = glGetUniformLocation(shader->ID, "model");

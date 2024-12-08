@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TEXTURE_H
+#define TEXTURE_H
+
 #include <string>
 
 class Texture {
@@ -12,3 +14,4 @@ public:
 private:
     unsigned int texture1;
 };
+#endif

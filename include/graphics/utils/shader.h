@@ -73,7 +73,12 @@ public:
    
     void use() const
     {
-        glUseProgram(ID);
+        GLint currentProgram;
+        glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
+
+        if (static_cast<GLuint>(currentProgram) != ID) {
+            glUseProgram(ID);
+        }
     }
     void setBool(const std::string& name, bool value) const
     {

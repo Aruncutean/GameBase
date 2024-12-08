@@ -6,7 +6,7 @@
 #define SCENE2D_H
 
 #include <vector>
-#include "../object/object2d.h"
+#include "graphics/object/object2d.h"
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
@@ -21,7 +21,6 @@ public:
     ~Scene2d();
 
     void draw();
-
 
     void addObject(Object2d *obj);
 

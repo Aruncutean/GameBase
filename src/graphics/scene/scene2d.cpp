@@ -2,7 +2,7 @@
 // Created by arunc on 29/09/2024.
 //
 
-#include "scene2d.h"
+#include "graphics/scene/scene2d.h"
 
 Scene2d::Scene2d() {
     objects = new std::vector<Object2d *>;
@@ -13,10 +13,8 @@ Scene2d::Scene2d() {
 Scene2d::~Scene2d() {
 }
 
-
-
 void Scene2d::draw() {
-    projection = glm::ortho(0.0f, 800.0f,  600.0f,0.0f);
+    projection = glm::ortho(0.0f, 800.0f,  600.0f,0.0f, -1.0f, 1.0f);
     drawBackground();
     for (int i = 0; i < objects->size(); i++) {
         objects->at(i)->draw();

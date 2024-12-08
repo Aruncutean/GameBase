@@ -2,7 +2,9 @@
 // Created by arunc on 29/09/2024.
 //
 
-#include "window.h"
+#include "window/window.h"
+
+#include "setting/Setting.h"
 
 Window::Window(Game *game) : game(game) {
 }
@@ -38,17 +40,30 @@ void Window::loop() {
     glClearColor(0.0f, 0.5f, 1.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
     SDL_GL_SwapWindow(window);
-
-    SDL_Event event;
+    bool pPressed = false;
     while (running) {
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {
                 running = false;
             }
         }
+        const Uint8 *state = SDL_GetKeyboardState(NULL);
+        if (state[SDL_SCANCODE_P]) {
+            if (!pPressed) {
+                pPressed = true;
+                Setting::getInstance().enableLineRender = !Setting::getInstance().enableLineRender;
+            }
+        } else {
+            pPressed = false;
+        }
+        game->keyPress(state);
+
+        int mouseX, mouseY;
+        const Uint32 mouseState = SDL_GetMouseState(&mouseX, &mouseY);
+        game->mouseHandle(mouseX, mouseY, &mouseState);
 
         glClearColor(0.0f, 0.1f, 0.0f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         game->update();
 
@@ -92,7 +107,8 @@ void Window::initSDL() {
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3); // OpenGL 3.3 pentru Windows
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
-
+    SDL_GL_SetAttribute(SDL_GL_MULTISAMPLEBUFFERS, 1);
+    SDL_GL_SetAttribute(SDL_GL_MULTISAMPLESAMPLES, 4);
     window = SDL_CreateWindow("My Game",
                               SDL_WINDOWPOS_CENTERED,
                               SDL_WINDOWPOS_CENTERED,

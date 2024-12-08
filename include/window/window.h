@@ -9,7 +9,7 @@
 #include "glad/glad.h"
 #include <iostream>
 
-#include "../game/game.h"
+#include "game/game.h"
 
 class Window {
 public:
@@ -26,7 +26,9 @@ public:
 private:
     SDL_Window *window;
     SDL_GLContext gl_context;
+    SDL_Event event;
     bool running = true;
+
     Game *game;
 
     void initSDL();
