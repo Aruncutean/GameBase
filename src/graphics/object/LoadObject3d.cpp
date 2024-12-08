@@ -92,18 +92,18 @@ Object3d  *LoadObject3d::load(std::string path) {
                             materialIndex = indexArray.GetAt(indexPosition);
                         }
                         FbxSurfaceMaterial *material = rootNode->GetChild(i)->GetMaterial(materialIndex);
-                        if (material) {
-                            std::cout << "Polygon " << indexPosition << " uses material: " << material->GetName() <<
-                                    "\n";
-                        } else {
-                            std::cout << "Polygon " << indexPosition << " has no valid material.\n";
-                        }
+                        // if (material) {
+                        //     std::cout << "Polygon " << indexPosition << " uses material: " << material->GetName() <<
+                        //             "\n";
+                        // } else {
+                        //     std::cout << "Polygon " << indexPosition << " has no valid material.\n";
+                        // }
                     }
                 }
                 int materialCount = rootNode->GetChild(i)->GetMaterialCount();
-                if (materialCount == 0) {
-                    std::cout << "No materials found on this mesh.\n";
-                }
+                // if (materialCount == 0) {
+                //     std::cout << "No materials found on this mesh.\n";
+                // }
 
                 FbxNode *node = rootNode->GetChild(i);
 

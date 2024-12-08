@@ -2,7 +2,6 @@
 // Created by arunc on 27/10/2024.
 //
 
-#include "stb_image.h"
 
 #include "Map.h"
 
@@ -16,39 +15,6 @@ Map::Map() {
     shader->setInt("texture1", 0);
 
     texture = new Texture("container.jpg");
-
-
-    unsigned char *data = stbi_load("map.png",
-                                    &width, &height, &nChannels,
-                                    0);
-
-    float yScale = 64.0f / 256.0f, yShift = 16.0f; // apply a scale+shift to the height data
-    int rez = 1;
-    unsigned bytePerPixel = nChannels;
-    for (int i = 0; i < height; i++) {
-        for (int j = 0; j < width; j++) {
-            unsigned char *pixelOffset = data + (j + width * i) * bytePerPixel;
-            unsigned char y = pixelOffset[0];
-
-            // vertex
-            vertices.push_back(-height / 2.0f + height * i / (float) height); // vx
-            vertices.push_back((int) y * yScale - yShift); // vy
-            vertices.push_back(-width / 2.0f + width * j / (float) width); // vz
-        }
-    }
-    std::cout << "Loaded " << vertices.size() / 3 << " vertices" << std::endl;
-    stbi_image_free(data);
-
-    for (unsigned i = 0; i < height - 1; i += rez) {
-        for (unsigned j = 0; j < width; j += rez) {
-            for (unsigned k = 0; k < 2; k++) {
-                indices.push_back(j + width * (i + k * rez));
-            }
-        }
-    }
-
-    numStrips = (height - 1) / rez;
-    numTrisPerStrip = (width / rez) * 2 - 2;
 }
 
 void Map::init() {
