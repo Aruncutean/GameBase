@@ -1,7 +1,7 @@
-﻿#include "SDL.h"
-#include "minecraft/Minecraft.h"
+﻿#include "../lib/SDL/include/SDL.h"
+#include "minecraft/include/Minecraft.h"
 #include "myGame/myGame.h"
-#include "window/window.h"
+#include "../include/window/window.h"
 
 
 int main(int argc, char* argv[]) {

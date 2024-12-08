@@ -2,9 +2,9 @@
 // Created by arunc on 26/10/2024.
 //
 
-#include "Minecraft.h"
+#include "../games/minecraft/include/Minecraft.h"
 
-#include "graphics/object/LoadObject3d.h"
+#include "../../../include/graphics/object/LoadObject3d.h"
 
 Minecraft::Minecraft() {
     scene = new Scene3d();

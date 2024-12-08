@@ -2,7 +2,7 @@
 // Created by arunc on 27/10/2024.
 //
 
-#include "CameraM.h"
+#include "../games/minecraft/include/CameraM.h"
 
 #include <iostream>
 #include <ostream>

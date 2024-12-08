@@ -5,8 +5,8 @@
 #ifndef MINECRAFT_H
 #define MINECRAFT_H
 
-#include "CameraM.h"
-#include "Map.h"
+#include "../games/minecraft/include/CameraM.h"
+#include "../games/minecraft/include/Map.h"
 #include "game/game.h"
 #include "graphics/scene/Scene3d.h"
 

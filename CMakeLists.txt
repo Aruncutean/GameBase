@@ -39,7 +39,14 @@ set(SRC_DIR "${CMAKE_SOURCE_DIR}/src")
 file(GLOB_RECURSE SRC_FILES "${SRC_DIR}/*.cpp")
 file(GLOB_RECURSE SRC_FILESH "${SRC_DIR}/*.h")
 
-add_executable(test ${CMAKE_SOURCE_DIR}/lib/glad/src/glad.c ${SRC_FILES} ${SRC_FILESH})
+set(GAME_DIR "${CMAKE_SOURCE_DIR}/games")
+file(GLOB_RECURSE GAME_FILES "${GAME_DIR}/*.cpp")
+file(GLOB_RECURSE GAME_FILESH "${GAME_DIR}/*.h")
+
+
+add_executable(test ${CMAKE_SOURCE_DIR}/lib/glad/src/glad.c ${SRC_FILES} ${SRC_FILESH}
+        ${GAME_FILES} ${GAME_FILESH}
+       )
 
 set(FBX_SDK_LIBS
         libfbxsdk

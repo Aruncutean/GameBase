@@ -7,10 +7,7 @@
 #include <vector>
 
 #include "graphics/utils/shader.h"
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
-#include "setting/Setting.h"
+#include <../../../lib/glm/glm/glm.hpp>
 #include "graphics/utils/texture.h"
 
 const int CHUNK_SIZE = 4;

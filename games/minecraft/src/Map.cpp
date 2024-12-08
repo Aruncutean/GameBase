@@ -3,9 +3,10 @@
 //
 
 
-#include "Map.h"
+#include "../include/Map.h"
 
-#include <glad/glad.h>
+#include <../../../lib/glad/src/include/glad/glad.h>
+#include <glm/ext/matrix_transform.hpp>
 
 
 Map::Map() {
