@@ -11,54 +11,16 @@ endif ()
 
 project("test")
 
-set(FBX_SDK_PATH "C:\\Program Files\\Autodesk\\FBX\\FBX SDK\\2020.3.7")
-if (CMAKE_BUILD_TYPE STREQUAL "Debug")
-    set(FBX_SDK_LIB_DIR "${FBX_SDK_PATH}/lib/x64/debug")
-    message(STATUS "Using Debug library directory: ${FBX_SDK_LIB_DIR}")
-elseif (CMAKE_BUILD_TYPE STREQUAL "Release")
-    set(FBX_SDK_LIB_DIR  "${FBX_SDK_PATH}/lib/x64/release")
-    message(STATUS "Using Release library directory: ${FBX_SDK_LIB_DIR}")
-endif ()
-
-include_directories(${CMAKE_SOURCE_DIR}/lib/glad/src/include)
-include_directories(${CMAKE_SOURCE_DIR}/lib/SDL/include)
-include_directories(${CMAKE_SOURCE_DIR}/lib/SDL_image/include)
-include_directories(${CMAKE_SOURCE_DIR}/lib/json/single_include/nlohmann)
-include_directories(${CMAKE_SOURCE_DIR}/lib/glm)
-include_directories(${CMAKE_SOURCE_DIR}/lib/stb)
-
-link_directories(${CMAKE_SOURCE_DIR}/lib/SDL/lib/x64)
-link_directories(${CMAKE_SOURCE_DIR}/lib/SDL_image/lib/x64)
-
-link_directories(${FBX_SDK_LIB_DIR})
-include_directories(${FBX_SDK_PATH}/include)
-
-include_directories(${CMAKE_SOURCE_DIR}/include)
-
-set(SRC_DIR "${CMAKE_SOURCE_DIR}/src")
-file(GLOB_RECURSE SRC_FILES "${SRC_DIR}/*.cpp")
-file(GLOB_RECURSE SRC_FILESH "${SRC_DIR}/*.h")
-
-set(GAME_DIR "${CMAKE_SOURCE_DIR}/games")
-file(GLOB_RECURSE GAME_FILES "${GAME_DIR}/*.cpp")
-file(GLOB_RECURSE GAME_FILESH "${GAME_DIR}/*.h")
 
 
-add_executable(test ${CMAKE_SOURCE_DIR}/lib/glad/src/glad.c ${SRC_FILES} ${SRC_FILESH}
-        ${GAME_FILES} ${GAME_FILESH}
-       )
+add_subdirectory(games/minecraft)
 
-set(FBX_SDK_LIBS
-        libfbxsdk
-        libxml2
-        zlib
-        alembic
-)
 
-add_definitions(-DFBXSDK_SHARED)
-target_link_libraries(test SDL2main SDL2 SDL2_image opengl32 ${FBX_SDK_LIBS})
+#add_executable(test ${CMAKE_SOURCE_DIR}/lib/glad/src/glad.c ${SRC_FILES} ${SRC_FILESH}
+#        ${GAME_FILES} ${GAME_FILESH}
+#       )
 
-if (CMAKE_VERSION VERSION_GREATER 3.12)
-    set_property(TARGET test PROPERTY CXX_STANDARD 20)
-endif ()
+#target_link_libraries(test SDL2main SDL2 SDL2_image opengl32 ${FBX_SDK_LIBS})
+
+
 
